@@ -26,10 +26,7 @@ admit,gre,gpa,rank
 1,760,3.35,2
 1,800,3.66,1
 1,620,3.61,1
-1,520,3.74,4plt.scatter(data_train['gre'], train, marker = '+', color = 'g')
-plt.xlabel = 'gre'
-plt.ylabel = 'Prob'
-plt.show()
+1,520,3.74,4
 1,780,3.22,2
 0,520,3.29,1
 0,540,3.78,4
