@@ -1,3 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gitignore
 .idea/workspace.xml
+.idea/Regression.iml
+.idea/inspectionProfiles/
+.ipynb_checkpoints/
+.idea/misc.xml
+.idea/vcs.xml
