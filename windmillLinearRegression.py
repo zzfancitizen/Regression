@@ -17,21 +17,22 @@ m = len(windmill_output)
 
 windmill_output = windmill_output.reshape(m, 1)
 new_input = np.insert(windmill_input, 0, 1, axis=1)
-theta = np.matrix(np.zeros((5,1)))
+theta = np.matrix(np.zeros((5, 1)))
 
-def grad_descent(x1,y,theta,iter_num,alpha):
+
+def grad_descent(x1, y, theta, iter_num, alpha):
     m = len(y)
-    costs=[]
+    costs = []
     for i in range(iter_num):
 
         theta = theta + x1.T*(y - x1*theta)*alpha/m
         cost = 1/2/m * (x1*theta-y).T*(x1*theta-y)
-        if (i%10000)==0:
+        if (i % 10000) == 0:
             costs.append(cost)
-            print('iteration = %i, cost = %.8f' %(i,cost))
+            print('iteration = %i, cost = %.8f' % (i, cost))
     return theta, costs
 
-new_theta,costs = grad_descent(new_input, windmill_output, theta, num_epoch, alpha)
+new_theta, costs = grad_descent(new_input, windmill_output, theta, num_epoch, alpha)
 
 print(new_theta)
 
